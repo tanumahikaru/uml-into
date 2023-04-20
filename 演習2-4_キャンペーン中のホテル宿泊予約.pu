@@ -1,0 +1,7 @@
+@startuml キャンペーン
+rectangle 予約 {
+usecase キャンペーン期間
+usecase キャンペーン
+}
+キャンペーン .> キャンペーン期間 : << extend >>
+@enduml
