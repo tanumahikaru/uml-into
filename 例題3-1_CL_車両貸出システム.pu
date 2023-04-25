@@ -25,4 +25,5 @@
     class 空車{
         - 空車番号: String
     }
+    hide circle
 @enduml
