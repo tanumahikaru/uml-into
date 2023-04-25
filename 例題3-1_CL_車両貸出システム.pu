@@ -1,0 +1,28 @@
+@startuml 例題
+    skinparam classAttributeIconSize 0
+    class 顧客{
+        - 氏名:String
+        - 電話番号:String
+        - 郵便番号:int
+        ---
+        + get氏名():String
+        + set氏名(name:String):void
+    }
+    class 車{
+        - 管理番号: String
+        - 車種: String
+        - 駆動: String
+    }
+    class 予約{
+        - 予約番号: String
+        - 管理番号: String
+        - 日付: String
+        - 顧客番号: String
+    }
+    class 貸出{
+        - 貸出番号: String
+    }
+    class 空車{
+        - 空車番号: String
+    }
+@enduml
