@@ -1,0 +1,33 @@
+@startuml 3-3 
+left to right direction
+skinparam linetype ortho
+
+class "利用者" as user {
+-名前
+-住所
+-電話番号
+}
+
+class "ホテル" as hotel {
+-部屋
+}
+
+class "部屋" as room {
+-タイプ
+-価格
+-キャンペーン価格
+}
+
+class "予約" as reception {
+-チェックイン日
+-滞在期間
+-値段
+}
+
+hotel *-- room : 含む
+hotel -- user : 登録
+user --> room : 選択
+reception --o room : 対象
+user o-- reception : 行う
+hotel *-- reception : 受け付け
+@enduml
