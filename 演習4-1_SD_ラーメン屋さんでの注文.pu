@@ -10,7 +10,7 @@ participant "<u>:料理人</u>" as cook
 activate cumstmer
     cumstmer -> clerk: ラーメンを注文する
     activate clerk
-        clerk -> cook: 調理する
+        clerk -> cook: 伝える
         activate cook
         cook -> cook: 調理をする
          clerk <-- cook: ラーメン
