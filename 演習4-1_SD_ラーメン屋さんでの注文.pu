@@ -1,0 +1,22 @@
+@startuml 演習4-1
+hide footbox
+autonumber
+' 厳密なUMLに準拠する
+skinparam style strictuml
+actor "<u>:客</u>" as cumstmer
+participant "<u>:フロア店員</u>" as clerk
+participant "<u>:料理人</u>" as cook
+
+activate cumstmer
+    cumstmer -> clerk: ラーメンを注文する
+    activate clerk
+        clerk -> cook: 調理する
+        activate cook
+        cook -> cook: 調理をする
+         clerk <-- cook: ラーメン
+        deactivate cook
+            cumstmer <-- clerk: ラーメン
+    deactivate clerk
+deactivate cumstmer
+
+@enduml
