@@ -1,0 +1,19 @@
+@startuml 演習３－６
+left to right direction
+object "<u>高橋洋平: 社員</u>" as employee1 {
+氏名=高橋洋平
+}
+object "<u>樋口正之: 社員</u>" as employee2 {
+氏名=樋口正之
+}
+object "<u>情報処理安全確保支援士: 資格</u>" as certification1 {
+名称=情報処理安全確保支援士
+}
+object "<u>LinuC試験Level1: 資格</u>" as certification2 {
+名称=LinuC試験Level1
+}
+employee1 -- certification1
+employee2 -- certification1
+employee1 -- certification2
+
+@enduml
