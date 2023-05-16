@@ -1,0 +1,22 @@
+@startuml 演習4-6
+hide footbox
+Actor ユーザー as us
+participant "<u>:ブラウザ</u>" as br
+participant "<u>:webサーバー</u>" as web
+participant "<u>:画像サーバー</u>" as image
+activate us
+activate br
+us -> br:閲覧ボタン
+activate web
+br -> web:画像検索
+web -> image:画像ファイル検索
+activate image
+image -> image:検索
+web <-- image:検索結果
+deactivate image
+web --> web:閲覧可能状態
+br <-- web:再生
+deactivate web
+us <-- br:画像表示
+deactivate br
+@enduml
