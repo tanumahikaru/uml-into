@@ -2,6 +2,7 @@
 left to right direction
 class 医者
 class 患者
+class 診察記録
 class 医局 {
 -外科
 -内科
@@ -10,4 +11,6 @@ class 医局 {
 
 医者 "1" -down- "1" 患者
 医者 "1" -down- "*" 医局
+医者 "1" -down- "1" 診察記録
+患者 "1" -down- "1" 診察記録
 @enduml
