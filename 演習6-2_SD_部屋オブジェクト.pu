@@ -1,0 +1,15 @@
+@startuml 6-2
+left to right direction
+state 未使用{
+state entry <<entryPoint>>
+state exit <<exitPoint>>
+entry --> 空室状態: 予約待ち
+空室状態 --> 予約済み: 予約中
+予約済み --> 空室状態: キャンセル
+}
+[*] --> entry
+予約済み--> exit: 入室待ち
+exit -down-> 使用状態
+使用状態 --> 空室状態: 退室
+使用状態 --> [*]: 入室完了
+@enduml
