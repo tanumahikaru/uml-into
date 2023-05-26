@@ -5,7 +5,7 @@ actor 看護師#DDDDDD;line:black;line.bold;
 rectangle 予約システム {
 usecase メニューに行く
 usecase 登録する
-usecase 順番を見る
+usecase あなたの順番を見る
 usecase 今の順番を見る
 }
 今の順番を見る <-- 看護師 
