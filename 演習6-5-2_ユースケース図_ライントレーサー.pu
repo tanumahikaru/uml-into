@@ -5,8 +5,8 @@ actor 光センサー as sensor
 
 rectangle ライントレーサー {
     usecase 電源SV as powersupply
-    usecase 右モーター as right
-    usecase 左モーター as left
+    usecase 右モーターを動かす as right
+    usecase 左モーターを動かす as left
 }
 
 user --> powersupply
