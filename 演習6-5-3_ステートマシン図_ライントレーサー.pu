@@ -1,0 +1,25 @@
+@startuml 6-5-3
+left to right direction
+
+[*] -right-> 電源SWオフ
+
+state 電源SWオン {
+    state entry <<entryPoint>>
+    state exit <<exitPoint>>
+    
+    entry --> 右旋回 
+    右旋回 --> 左旋回: ライン上から外れる
+    右旋回: 左モーターon
+    右旋回: 右モーターof
+    左旋回 --> 右旋回: ライン上に乗る
+    左旋回: 左モーターof
+    左旋回: 右モーターon
+    左旋回 --> exit 
+}
+
+電源SWオフ --> entry: 起動
+ exit--> 電源SWオフ: 停止
+
+電源SWオフ -right-> [*]
+
+@enduml
