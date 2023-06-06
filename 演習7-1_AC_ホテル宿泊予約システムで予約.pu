@@ -1,11 +1,9 @@
 @startuml 7-1
 
-
 start
-:名前を登録する;
-
-:パスワードを入力する;
-
-:アクティビティC;
+repeat :名前を登録する;
+    :パスワードを入力する;
+    repeat while (パスワード照合) is (不一致)
+:予約成功;
 stop
 @enduml
